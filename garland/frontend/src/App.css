@@ -1,0 +1,23 @@
+.container{
+  padding: 40px 90px;
+  text-align: left;
+}
+
+.container .header{
+  margin: 20px;
+}
+
+.container .footer{
+  text-align: left;
+  position: absolute;
+  bottom: 0;
+}
+
+.post .card{
+  width: 480px;
+  text-align: justify;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+  padding: 8px;
+  margin:8px
+}
