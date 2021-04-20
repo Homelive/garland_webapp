@@ -13,8 +13,7 @@
   bottom: 0;
 }
 
-.post .card{
-  width: 480px;
+.intro{
   text-align: justify;
   word-wrap: normal;
   text-overflow: ellipsis;

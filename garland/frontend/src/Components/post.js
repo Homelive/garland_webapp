@@ -14,6 +14,17 @@ const other_fields = ["Address", "Contact" ,"Website"]
 const extra_fields =  ["Notes" ,"Email address", "Photo captions", "Visiting hours", "Website"];
 
 export default class Post extends Component{
+    isValidUrl = (string) => {
+      let url;
+      
+      try {
+        url = new URL(string);
+      } catch (_) {
+        return false;  
+      }
+
+      return true;
+    }
     render(){
         const {post} = this.props;
         return(
@@ -51,9 +62,17 @@ export default class Post extends Component{
                                     <Typography color="textSecondary" gutterBottom>
                                         {field}
                                     </Typography>
-                                    <Typography key={post.id} variant="body2" component="p" gutterBottom>
-                                        {post[field]}
-                                    </Typography>
+                                    {
+                                        (field=="Website") || (field=="Contact" && this.isValidUrl(post[field]))?
+                                        <a href={post[field]}>
+                                            <Typography key={post.id} variant="body2" component="p" gutterBottom>
+                                                {post[field]}
+                                            </Typography>
+                                        </a> :
+                                        <Typography key={post.id} variant="body2" component="p" gutterBottom>
+                                            {post[field]}
+                                        </Typography>
+                                    }
                                 </div>
                             )
                         })}
