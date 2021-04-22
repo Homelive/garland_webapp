@@ -14,7 +14,6 @@
 }
 
 .intro{
-  text-align: justify;
   word-wrap: normal;
   text-overflow: ellipsis;
   padding: 8px;

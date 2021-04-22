@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Container from '@material-ui/core/Container';
 import Home from './Pages/Home/home';
 import Logo from "./assets/logo.jpg";
+import Typography from '@material-ui/core/Typography';
 
 import './App.css';
 
@@ -14,6 +15,9 @@ export default class App extends Component{
             </div>
             <div>
               <p className="intro">
+              <Typography variant="h5" component="h2" gutterBottom>
+                  Gunyang: East Gippsland Craft Map
+              </Typography>
                 The Australian Craft Map is a project of the World Crafts Council - Australia which aims to make the world of craft accessible. It includes craft organisations, associations, guilds, workshops, galleries, museums and suppliers across the country.
 The first focus region is beautiful East Gippsland in Victoria. While exploring the natural wonders of East Gippsland, we encourage you to discover the beautiful things that locals make of their world.
 This listing features makers in East Gippsland, which combines the township of Bairnsdale with communities in scenic Alpine, bush, coast and lakes.
